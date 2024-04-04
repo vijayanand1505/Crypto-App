@@ -1,56 +1,86 @@
-.coin-container{
+/* Default styles */
+.coin-container {
     display: flex;
     justify-content: center;
 }
-.coin-row{
+
+.coin-row {
     display: flex;
-    flex-direction: row;
+    flex-direction: column; /* Change to column for smaller screens */
     justify-items: start;
-    align-items: center;
-    height: 80px;
+    align-items: center; /* Center items vertically */
+    height: auto; /* Change height to auto */
     border-bottom: 1px solid #d7d7d7;
-    width: 900px;
+    max-width: 900px;
+    width: 100%;
+    padding: 10px; /* Add padding for better spacing */
 }
-.coin{
+
+.coin {
     display: flex;
     align-items: center;
-    padding: 24px;
-    min-width: 300px;
+    padding: 10px;
+    min-width: 100%;
 }
-.coin img{
+
+.coin img {
     height: 30px;
     width: 30px;
     margin-right: 10px;
 }
-.coin h1{
-    font-size: 16px;
-    width: 150px;
-}
-.coin-symbol{
-    text-transform: uppercase;
 
+.coin h1 {
+    font-size: 16px;
+    margin-right: auto; /* Push remaining content to the left */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-.coin-data{
+
+.coin-symbol {
+    text-transform: uppercase;
+}
+
+.coin-data {
     display: flex;
     text-align: center;
     justify-content: space-between;
     width: 100%;
 }
-.coin-price{
-    width:110px;
-}
-.coin-volume{
-    width: 230px;
-}
-.coin-marketcap{
-    width: 155px;
-}
-.coin-percent{
+
+/* Adjust widths for better responsiveness */
+.coin-price,
+.coin-volume,
+.coin-marketcap,
+.coin-percent {
     width: 100%;
 }
-.red{
+
+.red {
     color: #f00606;
 }
-.green{
+
+.green {
     color: #11d811;
+}
+
+/* Media query for responsiveness */
+@media only screen and (min-width: 600px) {
+    .coin-row {
+        flex-direction: row; /* Change back to row for larger screens */
+        justify-content: flex-start; /* Align items to the start */
+        height: 80px; /* Restore height for consistency */
+    }
+
+    .coin {
+        min-width: 300px;
+    }
+
+    .coin h1 {
+        width: 150px;
+    }
+
+    .coin-volume {
+        width: auto; /* Allow volume to expand */
+    }
 }
