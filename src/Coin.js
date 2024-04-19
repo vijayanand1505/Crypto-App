@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"; 
 import "./Coin.css";
 
 const Coin = ({ image, name, price, volume, pricechange, marketcap }) => {
