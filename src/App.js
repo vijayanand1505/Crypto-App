@@ -3,7 +3,7 @@ import "./App.css";
 import axios from "axios";
 import Coin from "./Coin";
 
-function App() { 
+function App() {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
   useEffect(() => {
