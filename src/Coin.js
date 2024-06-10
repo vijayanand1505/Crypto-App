@@ -2,7 +2,7 @@ import React from "react";
 import "./Coin.css";
 
 const Coin = ({ image, name, price, volume, pricechange, marketcap }) => {
-  return (
+  return ( 
     <div className="coin-container">
       <div className="coin-row">
         <div className="coin">
